@@ -1,0 +1,41 @@
+POST
+http://localhost:8080/api/v1/person
+Body
+{ "name": "Alex Levin", "age": 20 }
+
+GET
+http://localhost:8080/api/v1/person
+[
+    {
+        "id": "86351edf-df0f-485b-8323-17f87c1af8cc",
+        "name": "Alex Levin",
+        "age": 20
+    }
+]
+
+GET
+http://localhost:8080/api/v1/person/86351edf-df0f-485b-8323-17f87c1af8cc
+
+PUT
+http://localhost:8080/api/v1/person/86351edf-df0f-485b-8323-17f87c1af8cc
+Body
+{ "name": "Levin, Alex", "age": 20 }
+
+DELETE
+http://localhost:8080/api/v1/person/86351edf-df0f-485b-8323-17f87c1af8cc
+
+cd clent
+npx create-react-app .
+
+npm run build
+copy build folder content to spring-boot-essentials\server\src\main\resources\static\
+
+cd server
+mvnw spring-boot:run
+
+localhost:8080
+
+Output:
+Albert Levin 11
+Alex Levin 20
+
